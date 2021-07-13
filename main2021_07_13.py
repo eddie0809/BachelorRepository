@@ -58,10 +58,6 @@ rho = np.matmul(rho, first)
 #
 ###
 
-
-def sinFit(x, a, b, phi, c):
-	return a*np.sin(b*x + phi) + c 
-
 t = np.linspace(0,100,100)
 energyX = []
 energyY = []
@@ -86,10 +82,11 @@ for i in range(N+1):
 	energies["energyY", i] = np.real(energyY) # but they still have the +0.j.
 	energies["energyZ", i] = energyZ # there are some energies with imaginary part (?) in this one (what does it mean? i don't know). i therefore didnt remove it here
 
-#poptX, pcovX = curve_fit(sinFit, t/(2*np.pi), np.real(energyX), p0=[.7, 2, 0, 7]) <-- the function in X and Y should be sinusoidal.
+#poptX, pcovX = curve_fit(timeEvo.sinFit, t/(2*np.pi), np.real(energyX), p0=[.7, 2, 0, 7]) <-- the function in X and Y should be sinusoidal.
 #print(poptX)
-#poptY, pcovY = curve_fit(sinFit, t/(2*np.pi), np.real(energyY), bounds=([.35, 2.2, 0, -.1],[.4, 2.6, 2, .1]))
+#poptY, pcovY = curve_fit(timeEvo.sinFit, t/(2*np.pi), np.real(energyY), bounds=([.35, 2.2, 0, -.1],[.4, 2.6, 2, .1]))
 #print(poptY)
+
 for i in range(N+1):
 	plt.plot(t/(2*np.pi), energies["energyX", i], label="x-energy")
 	plt.xlabel("time [1/J]") #in timeEvo.py i chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
