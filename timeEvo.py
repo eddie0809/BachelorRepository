@@ -1,3 +1,4 @@
+### this file is just that the main file isnt filled with 2 line functions. one could argue that this is less efficient
 import numpy as np
 import math
 
