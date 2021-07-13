@@ -1,3 +1,4 @@
+### this file is just so that this massive block of just defining functions is not in the main file
 import math
 import numpy as np
 
