@@ -1,11 +1,14 @@
-### this file is just that the main file isnt filled with 2 line functions. 
+### this file is just that the main file isnt filled with 2 line functions.
 import numpy as np
-import math
+from scipy import linalg as la
 
 
 def timeEvo(dt, rho, Hint): #time evolution of an operator rho
-	U = np.exp(-1.j * Hint * dt)
-	return np.matmul(np.matrix.getH(U), np.matmul(rho, U)) #np.matrix.getH creates the hermitian conjugate
+	# The more effective way to make expontial of a matrix is using `scipy.linalg.expm`
+	U = la.expm(-1.j * Hint * dt)
+	# In this case it's faster to define the unitary dagger than apply `matrix.getH`.
+	Ud = la.expm(1.j * Hint * dt)
+	return np.matmul(Ud, np.matmul(rho, U))
 
 
 def energy(rho, sigma):
@@ -13,4 +16,4 @@ def energy(rho, sigma):
 
 
 def sinFit(x, a, b, phi, c): # defining fit function
-	return a*np.sin(b*x + phi) + c 
+	return a*np.sin(b*x + phi) + c
