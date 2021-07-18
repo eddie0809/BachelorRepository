@@ -101,3 +101,12 @@ for i in range(N+1):
 	plt.xlabel("time [1/J]") #in timeEvo.py i chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
 	plt.ylabel("Energy [J]")
 	plt.show()
+
+# fidelity
+
+fidelity = []
+for dt in t:
+	rhoF = timeEvo.(dt, rho, Hint)
+	fidelity.append(timeEvo.fidelity(first, rhoF))
+plt.plot(t, fidelity)
+plt.show()
