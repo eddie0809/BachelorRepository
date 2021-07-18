@@ -17,3 +17,6 @@ def energy(rho, sigma):
 
 def sinFit(x, a, b, phi, c): # defining fit function
 	return a*np.sin(b*x + phi) + c
+
+def fidelity(rho, sigma):
+	return (np.trace(la.sqrtm((np.matmul(la.sqrtm(rho),np.matmul(sigma, la.sqrtm(rho)))))**2 #definition of fidelity from wikipedia
