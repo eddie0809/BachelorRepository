@@ -104,9 +104,9 @@ for i in range(N+1):
 
 # fidelity
 
-fidelity = []
+fidelityList = []
 for dt in t:
 	rhoF = timeEvo.(dt, rho, Hint)
-	fidelity.append(timeEvo.fidelity(first, rhoF))
-plt.plot(t, fidelity)
+	fidelityList.append(timeEvo.fidelity(first, rhoF))
+plt.plot(t, fidelityList)
 plt.show()
