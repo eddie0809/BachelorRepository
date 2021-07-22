@@ -28,6 +28,10 @@ for i in range(N+1): #prepare every x state
 	states["sigmaY", i] = prepState.stateY(N,i)
 	states["sigmaZ", i] = prepState.stateZ(N,i)
 
+basis = {}
+for i in range(N+1):
+	basis["zero",i] = prepState.state0(N,i)
+	basis["one",i] = prepState.state1(N,i)
 
 ###
 #
@@ -105,8 +109,10 @@ for i in range(N+1):
 # fidelity
 
 fidelityList = []
+rho_0 = partial_trace(rho)
 for dt in t:
-	rhoF = timeEvo.(dt, rho, Hint)
-	fidelityList.append(timeEvo.fidelity(first, rhoF))
+	rhoF = timeEvo(dt, rho, Hint)
+	rho_N = partial_trace(rhoF)
+	fidelityList.append(timeEvo.fidelity(rho_0, rho_N))
 plt.plot(t, fidelityList)
 plt.show()
