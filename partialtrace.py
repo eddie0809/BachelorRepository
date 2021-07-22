@@ -1,19 +1,36 @@
+from numpy import matmul
 import prepState
 
-N=2
+class PartialTrace:
+    __N = 0
+    __basis = {}
 
-basis = {}
-for i in range(N+1):
-	basis[0,i] = prepState.state0(N,i)
-	basis[1,i] = prepState.state1(N,i)
+    def __init__(self, n) -> None:
+        self.__N = n
+        for i in range(n+1):
+            self.__basis['0',i] = prepState.vector0(self.__N,i)
+            self.__basis['1',i] = prepState.vector1(self.__N,i)
 
-def bin(x, N):
-  return [ int(d) for d in '{:b}'.format(x).zfill(N) ]
+    def __bin(self, x):
+        return '{:b}'.format(x).zfill(self.__N)
 
-for i in range(2**N):
-  proj = 1
-  for k in range(1,N+1):
-    print(k)
-    for j in bin(i,N):
-      proj *= basis[j,k]
-  print(proj)
+    def __bin_set(self):
+        return [ self.__bin(i) for i in range(2**self.__N) ]
+
+    def get_first_state(self, rho):
+        result = 0
+        for b in self.__bin_set():
+            proj = 1
+            for (index, bit) in enumerate(b):
+                proj *= self.__basis[bit, index+1]
+            result += matmul(proj.T, matmul(rho, proj))
+        return result
+
+    def get_last_state(self, rho):
+        result = 0
+        for b in self.__bin_set():
+            proj = 1
+            for (index, bit) in enumerate(b):
+                proj *= self.__basis[bit, index]
+            result += matmul(proj.T, matmul(rho, proj))
+        return result
