@@ -4,9 +4,9 @@ from scipy import linalg as la
 
 
 def timeEvo(dt, rho, Hint): #time evolution of an operator rho
-	# The more effective way to make expontial of a matrix is using `scipy.linalg.expm`
+	# The more effective way to make expontial of a matrix is using 'scipy.linalg.expm'
 	U = la.expm(-1.j * Hint * dt)
-	# In this case it's faster to define the unitary dagger than apply `matrix.getH`.
+	# In this case it's faster to define the unitary dagger than apply 'matrix.getH'(= dagger)
 	Ud = la.expm(1.j * Hint * dt)
 	return np.matmul(Ud, np.matmul(rho, U))
 
@@ -14,9 +14,10 @@ def timeEvo(dt, rho, Hint): #time evolution of an operator rho
 def energy(rho, sigma):
 	return np.trace(np.matmul(sigma, rho))
 
-
+""" why i thought i needed to fit a sin to anything is still a mystery to me
 def sinFit(x, a, b, phi, c): # defining fit function
 	return a*np.sin(b*x + phi) + c
+"""
 
 def fidelity(rho, sigma):
 	"""Definition of fidelity from Wikipedia.
