@@ -1,6 +1,18 @@
 from numpy import matmul
 import prepState
 
+
+###
+#
+# maybe use QuTiP for this? q.ptrace(sel) exists, but this also exists, i'm conflicted.
+#
+###
+
+from qutip import *
+
+# Q.ptrace(sel) Partial trace returning components selected using 'sel' parameter.
+
+
 # Partial trace defined as a class because of the vector basis
 class PartialTrace:
     __N = 0
