@@ -22,6 +22,7 @@ kb = 8.617333262e-05
 
 
 N = 4 #chain length. counting starts at 0. arbitrary natural number.
+#DO NOT do N > 10. takes ages to run.
 states = {}
 for i in range(N+1): #prepare every x state
 	states["sigmaX", i] = prepState.stateX(N,i)
@@ -40,7 +41,7 @@ for i in range(N+1):
 ###
 
 Hint = 0
-for i in range(N): #
+for i in range(N): # interaction hamiltonian, XY-Heisenberg
 	Hint = Hint + np.matmul(states["sigmaX", i], states["sigmaX", i+1])
 	Hint = Hint + np.matmul(states["sigmaY", i], states["sigmaY", i+1])
 
@@ -48,27 +49,27 @@ H0 = 0
 for i in range(1,N+1):
 		H0 = H0 - states["sigmaZ", i]
 
-beta = 0.7 # 1/(kb*300) ----> choose a value for beta then calculate the temperature from that
+beta = 0.7 # 1/(kb*300) ----> choose a value for beta then calculate the temperature from that, avoids overflow error (kb is small)
 rho = np.exp(-beta * np.diag(H0))
 Z = np.sum(rho)
 rho = np.diag(rho / Z)
-first = prepState.state0(N,0)
-rho = np.matmul(rho, first)
+first = prepState.state0(N,0) # get |0><0| state for first spin
+rho = np.matmul(rho, first) # thermal state of the first spin
 
 
 ###
 #
-# Time evolution
+# Time evolution, very much unfinished.
 #
 ###
-
 t = np.linspace(0,100,100)
 energyX = []
 energyY = []
 energyZ = []
 
-#### X states
-energies = {} # all the energies are "stored" in this dictionary.
+"""
+
+energies = {} #
 for i in range(N+1):
 	energyX = [] #
 	energyY = [] # these are helper lists 
@@ -82,34 +83,30 @@ for i in range(N+1):
 		energyX.append(EoftX)
 		energyY.append(EoftY)
 		energyZ.append(EoftZ)
-	energies["energyX", i] = np.real(energyX) # this np.real is only to remove the +0.j from the numbers. no numbers are with imaginary part here
-	energies["energyY", i] = np.real(energyY) # but they still have the +0.j.
-	energies["energyZ", i] = energyZ # there are some energies with imaginary part (?) in this one (what does it mean? i don't know). i therefore didnt remove it here
+	energies["energyX", i] = np.real(energyX) # somehow i get imaginary results here
+	energies["energyY", i] = np.real(energyY) # or it gives me some 0.00000001j result.
+	energies["energyZ", i] = energyZ # kinda useless, 
 
-#poptX, pcovX = curve_fit(timeEvo.sinFit, t/(2*np.pi), np.real(energyX), p0=[.7, 2, 0, 7]) <-- the function in X and Y should be sinusoidal.
-#print(poptX)
-#poptY, pcovY = curve_fit(timeEvo.sinFit, t/(2*np.pi), np.real(energyY), bounds=([.35, 2.2, 0, -.1],[.4, 2.6, 2, .1]))
-#print(poptY)
 
-for i in range(N+1):
+for i in range(N+1): #I chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
 	plt.plot(t/(2*np.pi), energies["energyX", i], label="x-energy")
-	plt.xlabel("time [1/J]") #in timeEvo.py i chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
+	plt.xlabel("time [1/J]") 
 	plt.ylabel("Energy [J]")
 	plt.show()
 	plt.plot(t/(2*np.pi), energies["energyY", i], label="y-energy")
-	plt.xlabel("time [1/J]") #in timeEvo.py i chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
+	plt.xlabel("time [1/J]") 
 	plt.ylabel("Energy [J]")
 	plt.show()
 	plt.plot(t/(2*np.pi), np.real(energies["energyZ", i]), label="z-energy, real part")
 	plt.plot(t/(2*np.pi), np.imag(energies["energyZ", i]), label="z-energy, imag part")
-	plt.xlabel("time [1/J]") #in timeEvo.py i chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
+	plt.xlabel("time [1/J]")
 	plt.ylabel("Energy [J]")
 	plt.show()
-
+"""
 # fidelity
 
 fidelityList = []
-rho_0 = partial_trace(rho)
+rho_0 = partial_trace(rho) # partial trace to get state of i = 1 without i= 2,...,N
 for dt in t:
 	rhoF = timeEvo(dt, rho, Hint)
 	rho_N = partial_trace(rhoF)
