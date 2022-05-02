@@ -1,6 +1,45 @@
 ### this file is just that the main file isnt filled with 2 line functions.
 import numpy as np
 from scipy import linalg as la
+from qutip import *
+from generateStates import *
+
+def integrate(N, h, J, psi0, t, gamma, solver):
+
+    si_list = []
+
+    for n in range(N):
+        si_list.append(basis(N,n)*basis(N,n).dag())
+    
+    # construct the hamiltonian
+    H = 0
+
+    # energy splitting terms
+    for n in range(N):
+        H += h[n] * si_list[n]
+
+    # interaction terms
+    for n in range(N-1):
+        H += J[n]*(basis(N,n)*basis(N,n+1).dag() + basis(N,n+1)*basis(N,n).dag())
+
+    # # collapse operators
+    c_op_list = []
+
+    # spin dephasing  
+    #c_op_list.append(np.sqrt(gamma) * (qdiags([0,1,0],offsets=1) + qdiags([0,1,0],offsets=-1) + qdiags([0,1,0,0],offsets=0) )
+
+    #for n in range(N):
+    c_op_list.append(2*np.sqrt(gamma) * (basis(N,2)*basis(N,2).dag()))
+
+
+    # evolve and calculate expectation values
+    if solver == "me":
+        result = mesolve(H, psi0, t, c_op_list, [])
+    elif solver == "mc":
+        ntraj = 250 
+        result = mcsolve(H, psi0, t, c_op_list, si_list, ntraj)
+
+    return result.states
 
 
 def timeEvo(dt, rho, Hint): #time evolution of an operator rho
@@ -15,6 +54,7 @@ def timeEvo(dt, rho, Hint): #time evolution of an operator rho
 	#return np.matmul(Ud, np.matmul(rho, U))
 	rho = rho * Ud
 	return U * rho
+
 
 def energy(rho, sigma):
 	return np.trace(np.matmul(sigma, rho))
@@ -40,3 +80,7 @@ def stateTransfer(dt, Hint, first, last):
 	F = np.matmul(last, Fdings)
 	return F
 	
+
+def deriv(dt, f):
+	fdot = [(f[i+1]-f[i])/(dt) for i in range(len(f)-1)]
+	return fdot

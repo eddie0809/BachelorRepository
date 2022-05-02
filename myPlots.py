@@ -8,10 +8,10 @@ from qutip import *
 
 # for using tex formatting and font in plots
 #"""
-#plt.rcParams.update({"text.usetex": True, })
-#mpl.rcParams['text.latex.preamble'] = [
-#    r'\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}\inputencoding{utf8}\usepackage{amsmath}\usepackage{amssymb}\usepackage{mathtools}']
-#mpl.rcParams['font.family'] = ['serif']
+plt.rcParams.update({"text.usetex": True, })
+mpl.rcParams['text.latex.preamble'] = [
+    r'\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}\inputencoding{utf8}\usepackage{amsmath}\usepackage{amssymb}\usepackage{dsfont}\usepackage{mathtools}\usepackage{physics}']
+mpl.rcParams['font.family'] = ['serif']
 
 
 def plotZ(rho, save, title, t):  # i can expand this for x and y in the future
@@ -21,7 +21,7 @@ def plotZ(rho, save, title, t):  # i can expand this for x and y in the future
         energyZ = []
         for dt in t:
             rhoT = timeEvo(dt, rho, Hint)
-            EoftZ = energy(rhoT, states["sigmaZ", i])
+            EoftZ = energy(rhoT, myStates["sigmaZ", i])
             energyZ.append(EoftZ)
         energies["energyZ", i] = energyZ
         for j in range(0, 100):
@@ -41,15 +41,14 @@ def plotZ(rho, save, title, t):  # i can expand this for x and y in the future
         else:
             plt.show(block=True)
 
-def plotFidelity(rho, t, title):
+
+def plotFidelity(rho, t, title):#,saveas):
     #pt = partialtrace.PartialTrace(N)
     fidelityList = []
-    rho_0 = rho.ptrace(0)
-    rho_F = 0
+    rho_0 = rho.ptrace(0).unit()
     for dt in t:
-        rho_F = timeEvo(dt, rho, Hint)
-        #rho_N = 0.5*pt.get_last_state(rho_F)
-        rho_N = rho_F.ptrace(N)
+        rho_X = timeEvo(dt, rho, Hint)
+        rho_N = rho_X.ptrace(N).unit()
         fidelityList.append(fidelity(rho_0, rho_N))
     fidelityList = np.real(fidelityList)
     #print(fidelityList)
@@ -61,6 +60,8 @@ def plotFidelity(rho, t, title):
     ax.axvline(np.pi,color='grey')
     ax.axhline(1,color='grey')
     #plt.ylim(-0.2,1.2)
-    plt.savefig("FidelityTherm.png")
-    plt.show(block=False)
-    plt.pause(5)
+    #plt.savefig(str(saveas) + ".png")
+    plt.show(block=True)
+    #plt.pause(5)
+
+
