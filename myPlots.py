@@ -15,16 +15,16 @@ mpl.rcParams['font.family'] = ['serif']
 
 
 def plotZ(rho, save, title, t):  # i can expand this for x and y in the future
-    Eges = np.zeros(100)
+    Eges = np.zeros(len(t))
     energies = {}
-    for i in range(N+1):
+    for i in range(N-1):
         energyZ = []
         for dt in t:
             rhoT = timeEvo(dt, rho, Hint)
-            EoftZ = energy(rhoT, myStates["sigmaZ", i])
+            EoftZ = energy(rhoT.ptrace(i,i+1), sigmaz())
             energyZ.append(EoftZ)
         energies["energyZ", i] = energyZ
-        for j in range(0, 100):
+        for j in range(0, 200):
             Eges[j] += np.real(energyZ[j])
 
     # I chose hbar = 1 to avoid overflow errors. thats why it is time with units s/(Js) = 1/J.
@@ -39,10 +39,11 @@ def plotZ(rho, save, title, t):  # i can expand this for x and y in the future
             plt.show(block=False)
             plt.savefig(title+".png")
         else:
-            plt.show(block=True)
+            plt.show(block=False)
+    plt.pause(10)
 
 
-def plotFidelity(rho, t, title):#,saveas):
+def plotFidelity(rho, t, title, saveas):
     #pt = partialtrace.PartialTrace(N)
     fidelityList = []
     rho_0 = rho.ptrace(0).unit()
@@ -60,7 +61,7 @@ def plotFidelity(rho, t, title):#,saveas):
     ax.axvline(np.pi,color='grey')
     ax.axhline(1,color='grey')
     #plt.ylim(-0.2,1.2)
-    #plt.savefig(str(saveas) + ".png")
+    plt.savefig(str(saveas) + ".png")
     plt.show(block=True)
     #plt.pause(5)
 

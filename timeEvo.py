@@ -57,7 +57,7 @@ def timeEvo(dt, rho, Hint): #time evolution of an operator rho
 
 
 def energy(rho, sigma):
-	return np.trace(np.matmul(sigma, rho))
+	return expect(rho, sigma)#np.trace(np.matmul(sigma, rho))
 
 """
 def fidelity(rho, sigma):
