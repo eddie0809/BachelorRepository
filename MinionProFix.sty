@@ -1,0 +1,69 @@
+% This fixes several greek letters in the MinionPro font
+
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{MinionProFix}
+
+\newif\ifminion@cm
+\minion@cmtrue
+\newif\ifminion@libertine
+\minion@libertinefalse
+\newif\ifminion@kurier
+\minion@kurierfalse
+\newif\ifminion@pazo
+\minion@pazofalse
+\newif\ifminion@newpx
+\minion@newpxfalse
+
+\DeclareOption{cm}{}% the default
+\DeclareOption{libertine}{
+  \minion@cmfalse
+  \minion@libertinetrue
+}
+\DeclareOption{kurier}{
+  \minion@cmfalse
+  \minion@kuriertrue
+}
+\DeclareOption{pazo}{
+  \minion@cmfalse
+  \minion@pazotrue
+}
+\DeclareOption{newpx}{
+  \minion@cmfalse
+  \minion@newpxtrue
+}
+
+\ProcessOptions\relax
+
+% cm: the default
+\ifminion@cm
+  \DeclareSymbolFont{missing}{OML}{cmm}{m}{it}
+  \SetSymbolFont{missing}{bold}{OML}{cmm}{b}{it}
+\fi
+% libertine: extracted from newtxmath
+\ifminion@libertine
+  \newif\iftx@liby \tx@libyfalse
+  \newif\iftx@libaltvw \tx@libaltvwfalse
+  \newif\iftx@altnu \tx@altnufalse
+  \DeclareSymbolFont{missing}{OML}{nxlmi}{m}{it}
+  \SetSymbolFont{missing}{bold}{OML}{nxlmi}{b}{it}
+\fi
+% kurier: maybe the best
+\ifminion@kurier
+  \DeclareSymbolFont{missing}{OML}{kurier}{m}{it}
+  \SetSymbolFont{missing}{bold}{OML}{kurier}{b}{it}
+\fi
+% pazo
+\ifminion@pazo
+  \DeclareSymbolFont{missing}{OML}{zplm}{m}{it}
+  \SetSymbolFont{missing}{bold}{OML}{zplm}{b}{it}
+\fi
+% newpx
+\ifminion@newpx
+  \DeclareSymbolFont{missing}{OML}{npxmi}{m}{it}
+  \SetSymbolFont{missing}{bold}{OML}{npxmi}{b}{it}
+\fi
+
+% Assing the new symbols
+\DeclareMathSymbol{\vartheta}\mathord{missing}{35}
+\DeclareMathSymbol{\varrho}\mathord{missing}{37}

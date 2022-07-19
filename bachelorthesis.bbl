@@ -1,0 +1,1023 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{BA_maxwelldemon}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2ae389e06ba2d0f0f32ee7f909b8e672}{%
+           family={Maxwell},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima Clerk},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{2}{%
+        {Longmans, Green}%
+        {Co.}%
+      }
+      \strng{namehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{fullhash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{bibnamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authorbibnamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authornamehash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \strng{authorfullhash}{2ae389e06ba2d0f0f32ee7f909b8e672}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Theory of heat}
+      \field{year}{1872}
+      \verb{urlraw}
+      \verb https://www3.nd.edu/~powers/ame.20231/maxwell1872.pdf
+      \endverb
+      \verb{url}
+      \verb https://www3.nd.edu/~powers/ame.20231/maxwell1872.pdf
+      \endverb
+    \endentry
+    \entry{HS_BA_landauer1961irreversibility}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d79f4c07f6e5468564e98d3a5dd339a4}{%
+           family={Landauer},
+           familyi={L\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ibm}%
+      }
+      \strng{namehash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \strng{fullhash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \strng{bibnamehash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \strng{authorbibnamehash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \strng{authornamehash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \strng{authorfullhash}{d79f4c07f6e5468564e98d3a5dd339a4}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IBM journal of research and development}
+      \field{number}{3}
+      \field{title}{Irreversibility and heat generation in the computing process}
+      \field{volume}{5}
+      \field{year}{1961}
+      \field{pages}{183\bibrangedash 191}
+      \range{pages}{9}
+    \endentry
+    \entry{BA_Pendry_1983}{article}{}
+      \name{author}{1}{}{%
+        {{hash=11a2dbaedd13decd42e5049497685d9d}{%
+           family={Pendry},
+           familyi={P\bibinitperiod},
+           given={J\bibnamedelima B},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{11a2dbaedd13decd42e5049497685d9d}
+      \strng{fullhash}{11a2dbaedd13decd42e5049497685d9d}
+      \strng{bibnamehash}{11a2dbaedd13decd42e5049497685d9d}
+      \strng{authorbibnamehash}{11a2dbaedd13decd42e5049497685d9d}
+      \strng{authornamehash}{11a2dbaedd13decd42e5049497685d9d}
+      \strng{authorfullhash}{11a2dbaedd13decd42e5049497685d9d}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quantum limits to information flow are explored developing the central concept of a medium comprising several channels through which the information flows. In each channel there is an inequality between information flow I and energy flow E I2<or=E pi /(3h(cross)ln22) a relationship which, though speculated on before or derived for only a restricted class of systems, is proven for a wide range of systems. Applications are made to the energy cost of computing and to the maximum rate of cooling, Q, which in any one channel is Q<or= pi kB2T2/(3h(cross)).}
+      \field{journaltitle}{Journal of Physics A: Mathematical and General}
+      \field{month}{07}
+      \field{number}{10}
+      \field{title}{Quantum limits to the flow of information and entropy}
+      \field{volume}{16}
+      \field{year}{1983}
+      \field{pages}{2161\bibrangedash 2171}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1088/0305-4470/16/10/012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/0305-4470/16/10/012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/0305-4470/16/10/012
+      \endverb
+    \endentry
+    \entry{BA_kaonan_correlations}{article}{}
+      \name{author}{9}{}{%
+        {{hash=d42afd52b9514476c256a1c60b9bfd07}{%
+           family={Micadei},
+           familyi={M\bibinitperiod},
+           given={Kaonan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7c824b8e6319dcc90d543c77a92e59a2}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fbc12f22c7b3fa60b423ec6233c5c917}{%
+           family={Souza},
+           familyi={S\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9bcef01ed89d055b9a34b1d114a6d0fc}{%
+           family={Sarthour},
+           familyi={S\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8b70d8950a5ad24374c902b5e4c112e0}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=75beca0c36962953aa2931ecd84e5d38}{%
+           family={Landi},
+           familyi={L\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a08f60adaf24199923abfcd0c98a6512}{%
+           family={Batalhão},
+           familyi={B\bibinitperiod},
+           given={Tiago},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0531dd6cf323376a6928b073f9c1a30c}{%
+           family={Serra},
+           familyi={S\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5e57deb87ced27c9a31190658da0b38d}{%
+           family={Lutz},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{3caaa47e900254e600601443b7c85a15}
+      \strng{fullhash}{0ec0cd5174e1e3f94ae6ff67b7aff53d}
+      \strng{bibnamehash}{3caaa47e900254e600601443b7c85a15}
+      \strng{authorbibnamehash}{3caaa47e900254e600601443b7c85a15}
+      \strng{authornamehash}{3caaa47e900254e600601443b7c85a15}
+      \strng{authorfullhash}{0ec0cd5174e1e3f94ae6ff67b7aff53d}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Communications}
+      \field{month}{06}
+      \field{title}{Reversing the direction of heat flow using quantum correlations}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{pages}{2456}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-019-10333-7
+      \endverb
+    \endentry
+    \entry{BA_CROOKS-fluctuation}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9f65ac557691562d4b8946b4ba50cd96}{%
+           family={Crooks},
+           familyi={C\bibinitperiod},
+           given={Gavin\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{9f65ac557691562d4b8946b4ba50cd96}
+      \strng{fullhash}{9f65ac557691562d4b8946b4ba50cd96}
+      \strng{bibnamehash}{9f65ac557691562d4b8946b4ba50cd96}
+      \strng{authorbibnamehash}{9f65ac557691562d4b8946b4ba50cd96}
+      \strng{authornamehash}{9f65ac557691562d4b8946b4ba50cd96}
+      \strng{authorfullhash}{9f65ac557691562d4b8946b4ba50cd96}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{3}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{09}
+      \field{title}{Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences}
+      \field{volume}{60}
+      \field{year}{1999}
+      \field{pages}{2721\bibrangedash 2726}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.60.2721
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.60.2721
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.60.2721
+      \endverb
+    \endentry
+    \entry{HS_Jarzynski_1997}{article}{}
+      \name{author}{1}{}{%
+        {{hash=81b46fdf8427d6b9201bbbbf0b8a87a4}{%
+           family={Jarzynski},
+           familyi={J\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society ({APS})}%
+      }
+      \strng{namehash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \strng{fullhash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \strng{bibnamehash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \strng{authorbibnamehash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \strng{authornamehash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \strng{authorfullhash}{81b46fdf8427d6b9201bbbbf0b8a87a4}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{4}
+      \field{number}{14}
+      \field{title}{Nonequilibrium Equality for Free Energy Differences}
+      \field{volume}{78}
+      \field{year}{1997}
+      \field{pages}{2690\bibrangedash 2693}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/physrevlett.78.2690
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1103%2Fphysrevlett.78.2690
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1103%2Fphysrevlett.78.2690
+      \endverb
+    \endentry
+    \entry{HS_BA_Seifert_2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=03c58f7973dbaff22d5e24c09f8b075e}{%
+           family={Seifert},
+           familyi={S\bibinitperiod},
+           given={Udo},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{fullhash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{bibnamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authorbibnamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authornamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authorfullhash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Stochastic thermodynamics as reviewed here systematically provides a framework for extending the notions of classical thermodynamics such as work, heat and entropy production to the level of individual trajectories of well-defined non-equilibrium ensembles. It applies whenever a non-equilibrium process is still coupled to one (or several) heat bath(s) of constant temperature. Paradigmatic systems are single colloidal particles in time-dependent laser traps, polymers in external flow, enzymes and molecular motors in single molecule assays, small biochemical networks and thermoelectric devices involving single electron transport. For such systems, a first-law like energy balance can be identified along fluctuating trajectories. For a basic Markovian dynamics implemented either on the continuum level with Langevin equations or on a discrete set of states as a master equation, thermodynamic consistency imposes a local-detailed balance constraint on noise and rates, respectively. Various integral and detailed fluctuation theorems, which are derived here in a unifying approach from one master theorem, constrain the probability distributions for work, heat and entropy production depending on the nature of the system and the choice of non-equilibrium conditions. For non-equilibrium steady states, particularly strong results hold like a generalized fluctuation–dissipation theorem involving entropy production. Ramifications and applications of these concepts include optimal driving between specified states in finite time, the role of measurement-based feedback processes and the relation between dissipation and irreversibility. Efficiency and, in particular, efficiency at maximum power can be discussed systematically beyond the linear response regime for two classes of molecular machines, isothermal ones such as molecular motors, and heat engines such as thermoelectric devices, using a common framework based on a cycle decomposition of entropy production.}
+      \field{journaltitle}{Reports on Progress in Physics}
+      \field{month}{11}
+      \field{number}{12}
+      \field{title}{Stochastic thermodynamics, fluctuation theorems and molecular machines}
+      \field{volume}{75}
+      \field{year}{2012}
+      \field{pages}{126001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0034-4885/75/12/126001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/0034-4885/75/12/126001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/0034-4885/75/12/126001
+      \endverb
+    \endentry
+    \entry{BA_Nolting2014}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=edc40101c83f862d56e8171d61feebd0}{%
+           family={Nolting},
+           familyi={N\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{edc40101c83f862d56e8171d61feebd0}
+      \strng{fullhash}{edc40101c83f862d56e8171d61feebd0}
+      \strng{bibnamehash}{edc40101c83f862d56e8171d61feebd0}
+      \strng{authorbibnamehash}{edc40101c83f862d56e8171d61feebd0}
+      \strng{authornamehash}{edc40101c83f862d56e8171d61feebd0}
+      \strng{authorfullhash}{edc40101c83f862d56e8171d61feebd0}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dieses Kapitel besch{ä}ftigt sich mit einer}
+      \field{booktitle}{Grundkurs Theoretische Physik 2: Analytische Mechanik}
+      \field{isbn}{978-3-642-41980-5}
+      \field{title}{Hamilton-Mechanik}
+      \field{year}{2014}
+      \field{pages}{103\bibrangedash 179}
+      \range{pages}{77}
+      \verb{doi}
+      \verb 10.1007/978-3-642-41980-5_2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-642-41980-5_2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-642-41980-5_2
+      \endverb
+    \endentry
+    \entry{BA_cohen_tannoudji}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b424d6eadf894bf83fcb843c19382d7a}{%
+           family={{Cohen-Tannoudji}},
+           familyi={C\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1b77617a288ff1ae2dd6c4b93ff6c21c}{%
+           family={{Diu}},
+           familyi={D\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2b296c01a91a0ef430836a584b12f709}{%
+           family={{Laloe}},
+           familyi={L\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \strng{fullhash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \strng{bibnamehash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \strng{authorbibnamehash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \strng{authornamehash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \strng{authorfullhash}{8b480b5b3f02ec3004b9cfbc0d37f3f2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Quantum Mechanics, Volume 1}}
+      \field{volume}{1}
+      \field{year}{1977}
+      \verb{urlraw}
+      \verb https://ui.adsabs.harvard.edu/abs/1986qmv1.book.....C
+      \endverb
+      \verb{url}
+      \verb https://ui.adsabs.harvard.edu/abs/1986qmv1.book.....C
+      \endverb
+    \endentry
+    \entry{BA_Poschel2015}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=591192eca7dacd36ae7f1e42bce2ba13}{%
+           family={Pöschel},
+           familyi={P\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wiesbaden}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden}%
+      }
+      \strng{namehash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \strng{fullhash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \strng{bibnamehash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \strng{authorbibnamehash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \strng{authornamehash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \strng{authorfullhash}{591192eca7dacd36ae7f1e42bce2ba13}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Unter den Lp-R{ä}umen nimmt der Raum L2eine Sonderstellung ein, da es sich um einen Hilbertraum handelt -- also einen unendlich-dimensionalen Raum, der in seiner geometrischen Struktur dem klassischen n-dimensionalen euklidischen Raum am N{ä}chsten kommt. In einem Hilbertraum ist, im Unterschied zu einem Banachraum, der Begriff der Orthogonalit{ä}t wohldefiniert. Insbesondere besitzt jeder Hilbertraum eine Hilbertraumbasis aus orthonormalen Einheitsvektoren, und jedes Element besitzt eine eindeutige Darstellung durch eine, nicht notwendigerweise endliche, Linearkombination aus diesen Basisvektoren. Deren Koeffizienten hei{ß}en die Fourierkoeffizienten dieses Elementes bez{ü}glich dieser Orthonormalbasis, und die zugeh{ö}rige Linearkombination aus den Basisvektoren ist die Fourierreihendarstellung des Elementes.}
+      \field{booktitle}{Noch mehr Analysis: Mehrdimensionale Integration, Fouriertheorie, Funktionentheorie}
+      \field{isbn}{978-3-658-05854-8}
+      \field{title}{Fourierreihen}
+      \field{year}{2015}
+      \field{pages}{167\bibrangedash 214}
+      \range{pages}{48}
+      \verb{doi}
+      \verb 10.1007/978-3-658-05854-8_6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-658-05854-8_6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-658-05854-8_6
+      \endverb
+    \endentry
+    \entry{BA_messiah2014quantum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=67ebde2ed4cbbc3ca861cfba1005df54}{%
+           family={Messiah},
+           familyi={M\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \strng{fullhash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \strng{bibnamehash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \strng{authorbibnamehash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \strng{authornamehash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \strng{authorfullhash}{67ebde2ed4cbbc3ca861cfba1005df54}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum mechanics}
+      \field{year}{1991}
+    \endentry
+    \entry{BA_HS_nielsenchuang}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3b32fb3a134f406f7b5107358d27befe}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a45d7b8c1126d47db8340a49740ae58a}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{572433f591d674bc13699cfdc50a4782}
+      \strng{fullhash}{572433f591d674bc13699cfdc50a4782}
+      \strng{bibnamehash}{572433f591d674bc13699cfdc50a4782}
+      \strng{authorbibnamehash}{572433f591d674bc13699cfdc50a4782}
+      \strng{authornamehash}{572433f591d674bc13699cfdc50a4782}
+      \strng{authorfullhash}{572433f591d674bc13699cfdc50a4782}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum Computation and Quantum Information}
+      \field{year}{2010}
+    \endentry
+    \entry{BA_breuer2002theory}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=44be9d24e3ede84bee3691a7a300e5db}{%
+           family={Breuer},
+           familyi={B\bibinitperiod},
+           given={Heinz-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=4b215190f542b12fd214896e21eff64b}{%
+           family={Petruccione},
+           familyi={P\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press on Demand}%
+      }
+      \strng{namehash}{d7342c371361973574d397bbc9db86dd}
+      \strng{fullhash}{d7342c371361973574d397bbc9db86dd}
+      \strng{bibnamehash}{d7342c371361973574d397bbc9db86dd}
+      \strng{authorbibnamehash}{d7342c371361973574d397bbc9db86dd}
+      \strng{authornamehash}{d7342c371361973574d397bbc9db86dd}
+      \strng{authorfullhash}{d7342c371361973574d397bbc9db86dd}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The theory of open quantum systems}
+      \field{year}{2002}
+    \endentry
+    \entry{HS_BA_SeifertSkript}{book}{}
+      \name{author}{1}{}{%
+        {{hash=03c58f7973dbaff22d5e24c09f8b075e}{%
+           family={Seifert},
+           familyi={S\bibinitperiod},
+           given={Udo},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Institute for theoretical physics II, Universität Stuttgart, 70550 Stuttgart, Germany}%
+      }
+      \strng{namehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{fullhash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{bibnamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authorbibnamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authornamehash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \strng{authorfullhash}{03c58f7973dbaff22d5e24c09f8b075e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Foundations of statistical physics and thermodynamics from a dynamical perspective}
+      \field{year}{unpublished lecture notes}
+    \endentry
+    \entry{BA_Alicki2018}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=cb85060412d22f91849050754273e404}{%
+           family={Alicki},
+           familyi={A\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ceef092f1949afd3d11c01f9b64f8a33}{%
+           family={Kosloff},
+           familyi={K\bibinitperiod},
+           given={Ronnie},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=463fb981218536fdadc8d3f106126b32}{%
+           family={Binder},
+           familyi={B\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=edc2666ea4d3eec275f905f43c18b3e1}{%
+           family={Correa},
+           familyi={C\bibinitperiod},
+           given={Luis\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b2283e26f29ee3d76c9354deb486064e}{%
+           family={Gogolin},
+           familyi={G\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3a5aeb374d116d318106e902744c66dc}{%
+           family={Anders},
+           familyi={A\bibinitperiod},
+           given={Janet},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d41142b7c9285af2497324d1f80a6531}{%
+           family={Adesso},
+           familyi={A\bibinitperiod},
+           given={Gerardo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{fullhash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{bibnamehash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{authorbibnamehash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{authornamehash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{authorfullhash}{f37f626e738f1234dacbac082e28dcd1}
+      \strng{editorbibnamehash}{e3db6bd69871d915cfb451a56844edd3}
+      \strng{editornamehash}{e3db6bd69871d915cfb451a56844edd3}
+      \strng{editorfullhash}{b9ac45bb0b85af3e7bec1ef7291c30e7}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quantum Thermodynamics is a continuous dialogue between two independent theories: Thermodynamics and Quantum Mechanics. Whenever the two theories have addressed the same phenomena new insight has emerged. We follow the dialogue from equilibrium Quantum Thermodynamics and the notion of entropy and entropy inequalities which are the base of the II-law. Dynamical considerations lead to non-equilibrium thermodynamics of quantum Open Systems. The central part played by completely positive maps is discussed leading to the Gorini--Kossakowski--Lindblad--Sudarshan ``GKLS'' equation. We address the connection to thermodynamics through the system-bath weak-coupling-limit WCL leading to dynamical versions of the I-law. The dialogue has developed through the analysis of quantum engines and refrigerators. Reciprocating and continuous engines are discussed. The autonomous quantum absorption refrigerator is employed to illustrate the III-law. Finally, we describe some open questions and perspectives.}
+      \field{booktitle}{Thermodynamics in the Quantum Regime: Fundamental Aspects and New Directions}
+      \field{isbn}{978-3-319-99046-0}
+      \field{title}{Introduction to Quantum Thermodynamics: History and Prospects}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1007/978-3-319-99046-0_1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-319-99046-0_1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-319-99046-0_1
+      \endverb
+    \endentry
+    \entry{BA_Alicki_1979}{article}{}
+      \name{author}{1}{}{%
+        {{hash=721d9462aa166bcb420db2b5ddbab347}{%
+           family={Alicki},
+           familyi={A\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{721d9462aa166bcb420db2b5ddbab347}
+      \strng{fullhash}{721d9462aa166bcb420db2b5ddbab347}
+      \strng{bibnamehash}{721d9462aa166bcb420db2b5ddbab347}
+      \strng{authorbibnamehash}{721d9462aa166bcb420db2b5ddbab347}
+      \strng{authornamehash}{721d9462aa166bcb420db2b5ddbab347}
+      \strng{authorfullhash}{721d9462aa166bcb420db2b5ddbab347}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quantum open system weakly coupled to thermal reservoirs at different temperatures and under the influence of slowly varying external conditions is studied. The famous Carnot inequality for the efficiency of any heat engine is obtained.}
+      \field{journaltitle}{Journal of Physics A: Mathematical and General}
+      \field{month}{05}
+      \field{number}{5}
+      \field{title}{The quantum open system as a model of the heat engine}
+      \field{volume}{12}
+      \field{year}{1979}
+      \field{pages}{L103\bibrangedash L107}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/0305-4470/12/5/007
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/0305-4470/12/5/007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/0305-4470/12/5/007
+      \endverb
+    \endentry
+    \entry{BA_shannon}{article}{}
+      \name{author}{1}{}{%
+        {{hash=22e2130b8d96f93daba648ff62af869b}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{fullhash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{bibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorbibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authornamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorfullhash}{22e2130b8d96f93daba648ff62af869b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Bell System Technical Journal}
+      \field{number}{3}
+      \field{title}{A mathematical theory of communication}
+      \field{volume}{27}
+      \field{year}{1948}
+      \field{pages}{379\bibrangedash 423}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1002/j.1538-7305.1948.tb01338.x
+      \endverb
+    \endentry
+    \entry{BA_kl-divergence}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bfc8a6682ceeecf67fdad2887af1898d}{%
+           family={Kullback},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ba8d68e022d57a7f8ab9393fc434df7a}{%
+           family={Leibler},
+           familyi={L\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{e3d54cade1397688b490b3e9bd190312}
+      \strng{fullhash}{e3d54cade1397688b490b3e9bd190312}
+      \strng{bibnamehash}{e3d54cade1397688b490b3e9bd190312}
+      \strng{authorbibnamehash}{e3d54cade1397688b490b3e9bd190312}
+      \strng{authornamehash}{e3d54cade1397688b490b3e9bd190312}
+      \strng{authorfullhash}{e3d54cade1397688b490b3e9bd190312}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Mathematical Statistics}
+      \field{number}{1}
+      \field{title}{{On Information and Sufficiency}}
+      \field{volume}{22}
+      \field{year}{1951}
+      \field{pages}{79\bibrangedash 86}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1214/aoms/1177729694
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/aoms/1177729694
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/aoms/1177729694
+      \endverb
+    \endentry
+    \entry{BA_Mandelstam1991}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=8f63ee66587c42fe95160ebfde0583f4}{%
+           family={Mandelstam},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=02986ba00dfef7a581f2368017148845}{%
+           family={Tamm},
+           familyi={T\bibinitperiod},
+           given={Ig.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=2fd7aec1c25ab3e4e157b9b7530cd7bc}{%
+           family={Bolotovskii},
+           familyi={B\bibinitperiod},
+           given={Boris\bibnamedelima M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=77a6cc2cddbb92adfabdbe9c945691fd}{%
+           family={Frenkel},
+           familyi={F\bibinitperiod},
+           given={Victor\bibnamedelima Ya.},
+           giveni={V\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=e0d2ad79085de9ef80e4dab6fa2396cd}{%
+           family={Peierls},
+           familyi={P\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{fullhash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{bibnamehash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{authorbibnamehash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{authornamehash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{authorfullhash}{f0ae275ae1de24db0194b877027bc01b}
+      \strng{editorbibnamehash}{f7c5b71351fa579a6b6124f790f7b1fe}
+      \strng{editornamehash}{f7c5b71351fa579a6b6124f790f7b1fe}
+      \strng{editorfullhash}{f7c5b71351fa579a6b6124f790f7b1fe}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An uncertainty relation between energy and time having a simple physical meaning is rigorously deduced from the principles of quantum mechanics. Some examples of its application are discussed.}
+      \field{booktitle}{Selected Papers}
+      \field{isbn}{978-3-642-74626-0}
+      \field{title}{The Uncertainty Relation Between Energy and Time in Non-relativistic Quantum Mechanics}
+      \field{year}{1991}
+      \field{pages}{115\bibrangedash 123}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-642-74626-0_8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-642-74626-0_8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-642-74626-0_8
+      \endverb
+    \endentry
+    \entry{BA_JOHANSSON20131234}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e5316d76b303a1ea72437b38bb3e5a86}{%
+           family={Johansson},
+           familyi={J\bibinitperiod},
+           given={J.R.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=253416dcfe3687f3a7b908e7295c722f}{%
+           family={Nation},
+           familyi={N\bibinitperiod},
+           given={P.D.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2cfaf55a849299a0fe647e070cffada8}{%
+           family={Nori},
+           familyi={N\bibinitperiod},
+           given={Franco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \strng{fullhash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \strng{bibnamehash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \strng{authorbibnamehash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \strng{authornamehash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \strng{authorfullhash}{62a7917a6dcc5ae1ef4036bccb76dd1a}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present version 2 of QuTiP, the Quantum Toolbox in Python. Compared to the preceding version [J.R. Johansson, P.D. Nation, F. Nori, Comput. Phys. Commun. 183 (2012) 1760.], we have introduced numerous new features, enhanced performance, and made changes in the Application Programming Interface (API) for improved functionality and consistency within the package, as well as increased compatibility with existing conventions used in other scientific software packages for Python. The most significant new features include efficient solvers for arbitrary time-dependent Hamiltonians and collapse operators, support for the Floquet formalism, and new solvers for Bloch–Redfield and Floquet–Markov master equations. Here we introduce these new features, demonstrate their use, and give a summary of the important backward-incompatible API changes introduced in this version. Program Summary Program title: QuTiP: The Quantum Toolbox in Python Catalog identifier: AEMB_v2_0 Program summary URL:http://cpc.cs.qub.ac.uk/summaries/AEMB_v2_0.html Program obtainable from: CPC Program Library, Queen’s University, Belfast, N. Ireland Licensing provisions: GNU General Public License, version 3 No. of lines in distributed program, including test data, etc.: 33625 No. of bytes in distributed program, including test data, etc.: 410064 Distribution format: tar.gz Programming language: Python. Computer: i386, x86-64. Operating system: Linux, Mac OSX. RAM: 2+ Gigabytes Classification: 7. External routines: NumPy, SciPy, Matplotlib, Cython Catalog identifier of previous version: AEMB_v1_0 Journal reference of previous version: Comput. Phys. Comm. 183 (2012) 1760 Does the new version supercede the previous version?: Yes Nature of problem: Dynamics of open quantum systems Solution method: Numerical solutions to Lindblad, Floquet–Markov, and Bloch–Redfield master equations, as well as the Monte Carlo wave function method. Reasons for new version: Compared to the preceding version we have introduced numerous new features, enhanced performance, and made changes in the Application Programming Interface (API) for improved functionality and consistency within the package, as well as increased compatibility with existing conventions used in other scientific software packages for Python. The most significant new features include efficient solvers for arbitrary time-dependent Hamiltonians and collapse operators, support for the Floquet formalism, and new solvers for Bloch–Redfield and Floquet–Markov master equations. Restrictions: Problems must meet the criteria for using the master equation in Lindblad, Floquet–Markov, or Bloch–Redfield form. Running time: A few seconds up to several tens of hours, depending on size of the underlying Hilbert space.}
+      \field{issn}{0010-4655}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{number}{4}
+      \field{title}{QuTiP 2: A Python framework for the dynamics of open quantum systems}
+      \field{volume}{184}
+      \field{year}{2013}
+      \field{pages}{1234\bibrangedash 1240}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.cpc.2012.11.019
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0010465512003955
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0010465512003955
+      \endverb
+      \keyw{Open quantum systems,Lindblad,Bloch–Redfield,Floquet–Markov,Master equation,Quantum Monte Carlo,Python}
+    \endentry
+    \entry{BA_Christandl_2004}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5ed363070ed27652729320bec34cfd8f}{%
+           family={Christandl},
+           familyi={C\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=25b1af17ef67c3513c07f84080706657}{%
+           family={Datta},
+           familyi={D\bibinitperiod},
+           given={Nilanjana},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9599686a46cdec383dc84e5c2a0fe7e5}{%
+           family={Ekert},
+           familyi={E\bibinitperiod},
+           given={Artur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=567439e4c5c6adaede20b13c5b7b7556}{%
+           family={Landahl},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society ({APS})}%
+      }
+      \strng{namehash}{9b12cdc799dfd60a895b080bc2e89656}
+      \strng{fullhash}{0884cc13767eda0eeaa1969f9dc9418e}
+      \strng{bibnamehash}{9b12cdc799dfd60a895b080bc2e89656}
+      \strng{authorbibnamehash}{9b12cdc799dfd60a895b080bc2e89656}
+      \strng{authornamehash}{9b12cdc799dfd60a895b080bc2e89656}
+      \strng{authorfullhash}{0884cc13767eda0eeaa1969f9dc9418e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{05}
+      \field{number}{18}
+      \field{title}{Perfect State Transfer in Quantum Spin Networks}
+      \field{volume}{92}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1103/physrevlett.92.187902
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1103%2Fphysrevlett.92.187902
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1103%2Fphysrevlett.92.187902
+      \endverb
+    \endentry
+    \entry{Ba_QUANTUM-SPEED-LIM}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cbadbf9460f01d20432bc4fb34345309}{%
+           family={Yung},
+           familyi={Y\bibinitperiod},
+           given={Man-Hong},
+           giveni={M\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{cbadbf9460f01d20432bc4fb34345309}
+      \strng{fullhash}{cbadbf9460f01d20432bc4fb34345309}
+      \strng{bibnamehash}{cbadbf9460f01d20432bc4fb34345309}
+      \strng{authorbibnamehash}{cbadbf9460f01d20432bc4fb34345309}
+      \strng{authornamehash}{cbadbf9460f01d20432bc4fb34345309}
+      \strng{authorfullhash}{cbadbf9460f01d20432bc4fb34345309}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{3}
+      \field{journaltitle}{Phys. Rev. A}
+      \field{month}{09}
+      \field{title}{Quantum speed limit for perfect state transfer in one dimension}
+      \field{volume}{74}
+      \field{year}{2006}
+      \field{pages}{030303}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevA.74.030303
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.74.030303
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevA.74.030303
+      \endverb
+    \endentry
+    \entry{BA_Maier_longrange}{article}{}
+      \name{author}{9}{}{%
+        {{hash=75e967ea1e2a45dd13a519f1646311da}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a5ce1b89d406dc96e24d61c82c715d96}{%
+           family={Brydges},
+           familyi={B\bibinitperiod},
+           given={Tiff},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5211732d49f549e38929229b763e8e57}{%
+           family={Jurcevic},
+           familyi={J\bibinitperiod},
+           given={Petar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cdf195e2969503eaeac202ec5bad125a}{%
+           family={Trautmann},
+           familyi={T\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c019ef8cceffedd4c0b47a04d60ab97a}{%
+           family={Hempel},
+           familyi={H\bibinitperiod},
+           given={Cornelius},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d5ec0bbfc724ad12e7941f08b0082a81}{%
+           family={Lanyon},
+           familyi={L\bibinitperiod},
+           given={Ben\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1d000f4129693f426ca278b7f136bbd9}{%
+           family={Hauke},
+           familyi={H\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bd7a1095bcdd0757df7fbad3ac4eb2c5}{%
+           family={Blatt},
+           familyi={B\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3d0d22c0785d4014945374b145758619}{%
+           family={Roos},
+           familyi={R\bibinitperiod},
+           given={Christian\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{10ec20d6bc7e0780c42a94cd4ead1446}
+      \strng{fullhash}{ac340214d378e50b7c774449758b346e}
+      \strng{bibnamehash}{10ec20d6bc7e0780c42a94cd4ead1446}
+      \strng{authorbibnamehash}{10ec20d6bc7e0780c42a94cd4ead1446}
+      \strng{authornamehash}{10ec20d6bc7e0780c42a94cd4ead1446}
+      \strng{authorfullhash}{ac340214d378e50b7c774449758b346e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{2}
+      \field{title}{Environment-Assisted Quantum Transport in a 10-qubit Network}
+      \field{volume}{122}
+      \field{year}{2019}
+      \field{pages}{050501}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.122.050501
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.122.050501
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.122.050501
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

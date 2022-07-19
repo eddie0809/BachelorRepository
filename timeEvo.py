@@ -2,44 +2,60 @@
 import numpy as np
 from scipy import linalg as la
 from qutip import *
-from generateStates import *
+import prepState
 
-def integrate(N, h, J, psi0, t, gamma, solver):
+def generateStates(N, interaction):
+    myStates = {}
+    myBasis = {}
+    for i in range(N+1):
+        myStates["sigmaX", i] = prepState.stateX(N,i)
+        myStates["sigmaY", i] = prepState.stateY(N,i)
+        myStates["sigmaZ", i] = prepState.stateZ(N,i)
+        myStates["sigmaP", i] = .5*(myStates["sigmaX", i]+1.j*myStates["sigmaY", i])
+        myStates["sigmaM", i] = .5*(myStates["sigmaX", i]-1.j*myStates["sigmaY", i])
+        myBasis["zero",i] = prepState.state0(N,i)
+        myBasis["one",i] = prepState.state1(N,i)
 
-    si_list = []
+    #my_one = tensor(qeye(2),qeye(2),qeye(2),qeye(2),qeye(2))
+    if interaction=="hom": #homogenous interaction strength. 
+        Hint = 0
+        for i in range(N): # interaction hamiltonian, XY-Heisenberg #l / 2 * np.sqrt((i+1)*(N-i))
+            Hint = Hint + (myStates["sigmaX", i] * myStates["sigmaX", i+1] + myStates["sigmaY", i] * myStates["sigmaY", i+1])
+        J = 1
+        Hint = J * Hint # change interaction strength 
 
-    for n in range(N):
-        si_list.append(basis(N,n)*basis(N,n).dag())
-    
-    # construct the hamiltonian
-    H = 0
+        H0 = 0
+        for i in range(0,N+1):
+                H0 = H0 + myStates["sigmaZ", i]
+        Hges = Hint + H0
+        return Hges
+        
+    elif interaction=="perf":
+        Hint = 0
+        l=1
+        for i in range(N): # interaction hamiltonian, XY-Heisenberg #
+            Hint = Hint + l / 2 * np.sqrt((i+1)*(N-i)) * (myStates["sigmaX", i] * myStates["sigmaX", i+1] + myStates["sigmaY", i] * myStates["sigmaY", i+1])
+        J = 1/2
+        Hint = J * Hint # change interaction strength
 
-    # energy splitting terms
-    for n in range(N):
-        H += h[n] * si_list[n]
+        H0 = 0
+        for i in range(0,N+1):
+                H0 = H0 + myStates["sigmaZ", i]
+        Hges = Hint + H0
+        return Hges
 
-    # interaction terms
-    for n in range(N-1):
-        H += J[n]*(basis(N,n)*basis(N,n+1).dag() + basis(N,n+1)*basis(N,n).dag())
+    elif interaction=="long-range":
+        Hint=0
+        for k in range(0,N+1):
+            for i in range(0,k):
+                    J = (1/(np.abs(i-k)))**1.22
+                    Hint = Hint + J * (myStates["sigmaP", k] * myStates["sigmaM", i] + myStates["sigmaP", i] * myStates["sigmaM", k])
+        H0 = 0
+        for i in range(0,N+1):
+            H0 = H0 + myStates["sigmaZ", i]
+        Hges = Hint + H0
+        return Hges
 
-    # # collapse operators
-    c_op_list = []
-
-    # spin dephasing  
-    #c_op_list.append(np.sqrt(gamma) * (qdiags([0,1,0],offsets=1) + qdiags([0,1,0],offsets=-1) + qdiags([0,1,0,0],offsets=0) )
-
-    #for n in range(N):
-    c_op_list.append(2*np.sqrt(gamma) * (basis(N,2)*basis(N,2).dag()))
-
-
-    # evolve and calculate expectation values
-    if solver == "me":
-        result = mesolve(H, psi0, t, c_op_list, [])
-    elif solver == "mc":
-        ntraj = 250 
-        result = mcsolve(H, psi0, t, c_op_list, si_list, ntraj)
-
-    return result.states
 
 
 def timeEvo(dt, rho, Hint): #time evolution of an operator rho
@@ -55,9 +71,6 @@ def timeEvo(dt, rho, Hint): #time evolution of an operator rho
 	rho = rho * Ud
 	return U * rho
 
-
-def energy(rho, sigma):
-	return expect(rho, sigma)#np.trace(np.matmul(sigma, rho))
 
 """
 def fidelity(rho, sigma):

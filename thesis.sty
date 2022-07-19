@@ -1,0 +1,746 @@
+% Thesis template based on the Master thesis layout by Nicolai Lang
+
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{thesis}
+
+\newif\ifthesis@book
+\newif\ifthesis@theorem
+\thesis@theoremtrue
+\newif\ifthesis@uglyheader
+\thesis@uglyheadertrue
+\newif\ifthesis@weirdcolors
+\thesis@weirdcolorstrue
+\newif\ifthesis@dottedsubsection
+\thesis@dottedsubsectionfalse
+\newif\ifthesis@nostyledepigraph
+\thesis@nostyledepigraphfalse
+\newif\ifthesis@wrongspacing
+\thesis@wrongspacingtrue
+\newif\ifthesis@styledtoc
+\thesis@styledtocfalse
+\newif\ifthesis@alignedtoc
+\thesis@alignedtocfalse
+\newif\ifthesis@dottedtoc
+\thesis@dottedtocfalse
+\newif\ifthesis@titles
+\thesis@titlestrue
+
+\DeclareOption{notheorem}{%
+  \thesis@theoremfalse%
+}
+\DeclareOption{nouglyheaders}{%
+  \thesis@uglyheaderfalse%
+}
+\DeclareOption{noweirdcolors}{%
+  \thesis@weirdcolorsfalse%
+}
+\DeclareOption{dottedsubsection}{%
+  \thesis@dottedsubsectiontrue%
+}
+\DeclareOption{nostyledepigraph}{%
+  \thesis@nostyledepigraphtrue%
+}
+\DeclareOption{nowrongspacing}{%
+  \thesis@wrongspacingfalse%
+}
+\DeclareOption{consistency}{%
+  \thesis@uglyheaderfalse%
+  \thesis@weirdcolorsfalse%
+  \thesis@wrongspacingfalse%
+}
+\DeclareOption{styledtoc}{%
+  \thesis@styledtoctrue%
+}
+\DeclareOption{alignedtoc}{%
+  \thesis@alignedtoctrue%
+}
+\DeclareOption{dottedtoc}{%
+  \thesis@dottedtoctrue%
+}
+\DeclareOption{notitles}{%
+  \thesis@titlesfalse%
+}
+\ProcessOptions\relax
+
+\ifx\chapter\undefined
+\thesis@bookfalse
+\else
+\thesis@booktrue
+\fi
+
+% % %
+% % % Symbols
+% % %
+
+\RequirePackage{amssymb}% for theorem end symbols
+
+% % %
+% % % Color
+% % %
+
+\RequirePackage{xcolor}
+
+\definecolor{intlink}{HTML}{424B5C}
+\definecolor{top}{HTML}{646974}
+\definecolor{codeback}{HTML}{F2F2F2}
+\definecolor{seccolor}{HTML}{646974}
+\definecolor{secblock}{HTML}{123456}
+\definecolor{parablue}{HTML}{1357BD}
+\definecolor{myblue}{HTML}{1357BD}
+\definecolor{refblue}{HTML}{26B1FF}
+\definecolor{mygreen}{HTML}{10741E}
+\definecolor{mygray}{HTML}{2C3038}
+\definecolor{mylightgray}{HTML}{3661A0}
+\definecolor{dotgray}{HTML}{4B4B52}
+\definecolor{tikzorange}{HTML}{FF8811}
+\definecolor{tikzgrey}{HTML}{686868}
+\definecolor{tikzlight}{HTML}{DEE0E0}
+\definecolor{tikzred}{HTML}{E58A19}
+\definecolor{tikzgreen}{HTML}{2E7CBF}
+\definecolor{captioncolor}{named}{parablue}
+
+\definecolor{gray0}{HTML}{F1F1F1}
+\definecolor{gray1}{HTML}{DFDFDF}
+\definecolor{gray2}{HTML}{CDCDCD}
+\definecolor{gray3}{HTML}{BBBBBB}
+\definecolor{gray4}{HTML}{A6A6A6}
+\definecolor{gray5}{HTML}{8E8E8E}
+\definecolor{gray6}{HTML}{D6D6D6}
+\definecolor{gray7}{HTML}{404040}
+
+\ifthesis@theorem
+\RequirePackage[framemethod=tikz]{mdframed}
+
+\ifthesis@weirdcolors
+\colorlet{mybluebg}{myblue!05}
+\colorlet{mygreenbg}{mygreen!05}
+\colorlet{mygraybg}{mygray!05}
+\colorlet{mylightgraybg}{mylightgray!05}
+\else
+\colorlet{mybluebg}{gray1}
+\colorlet{mygreenbg}{gray1}
+\colorlet{mygraybg}{gray1}
+\colorlet{mylightgraybg}{gray1}
+\fi
+
+\mdfdefinestyle{mystyleblue}{%
+  linecolor=myblue,
+  outerlinewidth=1.0pt,
+  frametitlerule=true,
+  frametitlefont=\sffamily\color{white}\bfseries,
+  frametitlerulewidth=0pt,
+  frametitlerulecolor=myblue,
+  frametitlebackgroundcolor=myblue,
+  backgroundcolor=mybluebg,%myblue!05,
+  roundcorner=0pt,
+  skipabove=1ex,
+  skipbelow=1ex,
+  frametitleaboveskip=0.2ex,
+  frametitlebelowskip=0.2ex,
+  innertopmargin=\topskip,
+  innerleftmargin=0.5ex
+}
+
+\mdfdefinestyle{mystylegreen}{%
+  linecolor=mygreen,
+  outerlinewidth=1.0pt,
+  frametitlerule=true,
+  frametitlefont=\sffamily\color{white}\bfseries,
+  frametitlerulewidth=0pt,
+  frametitlerulecolor=mygreen,
+  frametitlebackgroundcolor=mygreen,
+  backgroundcolor=mygreenbg,%mygreen!05,
+  roundcorner=0pt,
+  skipabove=1ex,
+  skipbelow=1ex,
+  frametitleaboveskip=0.2ex,
+  frametitlebelowskip=0.2ex,
+  innertopmargin=\topskip,
+  innerleftmargin=0.5ex
+}
+
+\mdfdefinestyle{mystylegray}{%
+  linecolor=mygray,
+  outerlinewidth=1.0pt,
+  frametitlerule=true,
+  frametitlefont=\sffamily\color{white}\bfseries,
+  frametitlerulewidth=0pt,
+  frametitlerulecolor=mygray,
+  frametitlebackgroundcolor=mygray,
+  backgroundcolor=mygraybg,%mygray!05,
+  roundcorner=0pt,
+  skipabove=1ex,
+  skipbelow=1ex,
+  frametitleaboveskip=0.2ex,
+  frametitlebelowskip=0.2ex,
+  innertopmargin=\topskip,
+  innerleftmargin=0.5ex
+}
+
+\mdfdefinestyle{mystylelightgray}{%
+  linecolor=mylightgray,
+  outerlinewidth=1.0pt,
+  frametitlerule=true,
+  frametitlefont=\sffamily\color{white}\bfseries,
+  frametitlerulewidth=0pt,
+  frametitlerulecolor=mylightgray,
+  frametitlebackgroundcolor=mylightgray,
+  backgroundcolor=mylightgraybg,%mylightgray!05,
+  roundcorner=0pt,
+  skipabove=1ex,
+  skipbelow=1ex,
+  frametitleaboveskip=0.2ex,
+  frametitlebelowskip=0.2ex,
+  innertopmargin=\topskip,
+  innerleftmargin=0.5ex
+}
+
+\mdfdefinestyle{mystylegraythin}{%
+  linecolor=mylightgray,
+  outerlinewidth=1.0pt,
+  frametitlerule=true,
+  frametitlefont=\sffamily\color{white}\bfseries,
+  frametitlerulewidth=0pt,
+  frametitlerulecolor=mylightgray,
+  frametitlebackgroundcolor=mylightgray,
+  backgroundcolor=mylightgraybg,%mylightgray!05,
+  roundcorner=0pt,
+  skipabove=1ex,
+  skipbelow=1ex,
+  frametitleaboveskip=0.2ex,
+  frametitlebelowskip=0.2ex,
+  innertopmargin=\topskip,
+  innerleftmargin=0.5ex
+}
+
+\ifthesis@wrongspacing
+\newenvironment{markformula}{%
+  \begin{mdframed}[%
+    skipabove=8pt,
+    skipbelow=8pt,
+    outerlinewidth=1pt,
+    linecolor=gray1,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    frametitlerule=false,
+    nobreak=true,
+    frametitlebackgroundcolor=gray1,
+    backgroundcolor=gray1
+    ]%
+  }{%
+  \end{mdframed}
+}
+\else
+\newenvironment{markformula}{%
+  \begin{mdframed}[%
+    skipabove=\dimexpr\abovedisplayskip+0pt,% remove stretchability
+    skipbelow=\dimexpr\belowdisplayskip+0pt,% remove stretchability
+    outerlinewidth=0pt,
+    linecolor=gray1,
+    innertopmargin=1ex,
+    innerbottommargin=1ex,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    frametitlerule=false,
+    frametitlebackgroundcolor=gray1,
+    backgroundcolor=gray1
+    ]%
+  }{%
+  \end{mdframed}
+}
+\fi
+
+\newcounter{ThesisThmCounter}
+\ifthesis@book
+\let\theThesisThmCounter\thechapter
+\else
+\let\theThesisThmCounter\thesection
+\fi
+
+\def\thesis@resultname{Result}
+\def\thesis@definitionname{Definition}
+\def\thesis@propositionname{Proposition}
+\def\thesis@lemmaname{Lemma}
+\def\thesis@theoremname{Theorem}
+\def\thesis@corollaryname{Corollary}
+\def\thesis@conjecturename{Conjecture}
+\def\thesis@remarkname{Remark}
+
+% translate to german
+\AtBeginDocument{
+  \@ifpackagewith{babel}{ngerman}{
+    \def\thesis@resultname{Ergebnis}
+    \def\thesis@definitionname{Definition}
+    \def\thesis@propositionname{Proposition}
+    \def\thesis@lemmaname{Lemma}
+    \def\thesis@theoremname{Theorem}
+    \def\thesis@corollaryname{Korollar}
+    \def\thesis@conjecturename{Behauptung}
+    \def\thesis@remarkname{Bemerkung}
+    \def\declarationtitle{Ehrenw\"ortliche Erkl\"arung}
+    \def\declarationbody{
+      Hiermit versichere ich, dass ich die vorliegende Arbeit selbst\"andig und ohne Benutzung anderer als der angegebenen Quellen und Hilfsmittel angefertigt habe. Alle Stellen, die w\"ortlich oder sinngemäß aus ver\"offentlichten oder unver\"offentlichten Schriften entnommen sind, sind als solche kenntlich gemacht. \\
+      Die Arbeit hat noch nicht in gleicher oder \"ahnlicher Form oder auszugsweise im Rahmen einer anderen Pr\"uüfung dieser oder einer anderen Pr\"ufungsinstanz vorgelegen. Der Inhalt des elektronischen Exemplars stimmt mit dem des Druckexemplars überein. 
+    }
+  }
+}
+
+%% result
+\mdtheorem[
+style=mystyleblue,
+nobreak=true
+]{result}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@resultname%
+}[ThesisThmCounter]
+
+%% definition
+\mdtheorem[
+style=mystylegreen,
+nobreak=true
+]{definition}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@definitionname%
+}[ThesisThmCounter]
+
+%% prop
+\mdtheorem[
+style=mystylelightgray,
+nobreak=true
+]{proposition}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@propositionname%
+}[ThesisThmCounter]
+
+%% lemma
+\mdtheorem[
+style=mystylelightgray,
+nobreak=true
+]{lemma}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@lemmaname%
+}[ThesisThmCounter]
+
+%% theorem
+\mdtheorem[
+style=mystylelightgray,
+nobreak=true
+]{theorem}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@theoremname%
+}[ThesisThmCounter]
+
+%% corollary
+\mdtheorem[
+style=mystylelightgray,
+nobreak=true
+]{corollary}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@corollaryname%
+}[ThesisThmCounter]
+
+%% conjecture
+\mdtheorem[
+style=mystylegray,
+nobreak=true
+]{conjecture}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@conjecturename%
+}[ThesisThmCounter]
+
+%% note
+\mdtheorem[
+style=mystylegray,
+nobreak=true
+]{note}{%
+  \raisebox{1pt}{$\blacktriangleright$} \thesis@remarkname%
+}[ThesisThmCounter]
+\fi
+
+% % %
+% % % Headers
+% % %
+
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+% Fix fancyhdr bug
+\ifthesis@book\else
+\AtBeginDocument{\let\chapter\undefined}
+\fi
+
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\ifthesis@book
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\else
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fi
+\fancyhf{}
+%\fancyhead[LO]{\textcolor{top}{\sffamily\@author}}
+\fancyhead[RO]{\textcolor{top}{\sffamily\rightmark}}
+\ifthesis@book
+\fancyhead[LE]{\textcolor{top}{\sffamily\@chapapp\ %
+    \ifthesis@uglyheader%
+    \smash{\Huge\thechapter}
+    \else%
+    \thechapter
+    \fi
+  }}
+\else
+\fancyhead[LE]{\textcolor{top}{\sffamily\thesection}}
+\fi
+\fancyhead[RE]{\textcolor{top}{\sffamily\leftmark}}
+
+\fancyfoot[RO]{\textcolor{top}{\sffamily\vrule\ \thepage}}
+\fancyfoot[LE]{\textcolor{top}{\sffamily\thepage\ \vrule}}
+
+\ifthesis@uglyheader
+\newcommand*\dotrule{%
+  \makebox[0pt][l]{%
+    \hspace{-.5\textwidth}%
+    \raisebox{-8pt}{%
+      \makebox[\textwidth][l]{%
+        \dotfill
+      }%
+    }%
+  }%
+}
+\fancyhead[C]{\dotrule}
+\advance\headheight by 10pt% this will fail, but these headers are ugly anyway
+\fi
+
+
+\fancypagestyle{plain}{
+  \renewcommand{\headrule}{}
+  \fancyhead{}
+}
+
+\fancypagestyle{references}{
+  \renewcommand{\headrule}{}
+  \fancyhead{}
+  \fancyhead[LO]{\textcolor{top}{\sffamily\@author}}
+  \fancyhead[RO]{\textcolor{top}{\sffamily\rightmark}}
+  \fancyhead[RE]{\textcolor{top}{\sffamily\leftmark}}
+}
+
+\ifx\cleardoubleemptypage\undefined
+\typeout{Package thesis Info: cleardoubleemptypage undefined}
+\let\orig@cleardoublepage\cleardoublepage
+\newcommand{\cleardoubleemptypage}{%
+  \clearpage
+  {\pagestyle{empty}\orig@cleardoublepage}%
+}
+\let\cleardoublepage\cleardoubleemptypage
+\else
+\typeout{Package thesis Info: cleardoubleemptypage defined}
+\fi
+
+% % %
+% % % Captions
+% % %
+
+\RequirePackage{caption}
+\DeclareCaptionFormat{myformat}{%
+  {\small\color{captioncolor}\raisebox{-0.0pt}{$\blacksquare\,\,$}}%
+  \small\textbf{\textsf{\color{captioncolor}#1#2}}#3%
+}
+\DeclareCaptionStyle{mystyle}[
+margin=5mm,
+justification=centering
+]{
+  font=footnotesize,
+  labelfont=sc,
+  margin={0mm,0mm}
+}
+\captionsetup{
+  style=mystyle,
+  format=myformat
+}
+
+% % %
+% % % Titling
+% % %
+
+\newdimen\chapterboxwidth
+\newdimen\chapterboxheight
+\chapterboxwidth=8em
+\chapterboxheight=20ex
+\newdimen\sectionboxwidth
+\newdimen\sectionboxheight
+\sectionboxwidth=2.3em
+\sectionboxheight=3.5ex
+\newdimen\subsectionboxwidth
+\newdimen\subsectionboxheight
+\subsectionboxwidth=2.6em
+\subsectionboxheight=3ex
+\newdimen\subsubsectionboxwidth
+\newdimen\subsubsectionboxheight
+\subsubsectionboxwidth=3em
+\subsubsectionboxheight=2ex
+
+\newdimen\chapterbaselineoffset
+\newdimen\sectionbaselineoffset
+\newdimen\subsectionbaselineoffset
+\newdimen\subsubsectionbaselineoffset
+\chapterbaselineoffset=-16pt
+\sectionbaselineoffset=-0.5ex
+\subsectionbaselineoffset=-0.5ex
+\subsubsectionbaselineoffset=-0.5ex
+
+\ifthesis@titles
+\RequirePackage[explicit]{titlesec}
+\newlength\thesis@boxwidth
+
+\newcounter{thesis@secnumdepth}
+\newcommand\numfix[1]{
+  \setcounter{thesis@secnumdepth}{\value{secnumdepth}}
+  \setcounter{secnumdepth}{-2}
+  #1
+  \setcounter{secnumdepth}{\value{thesis@secnumdepth}}
+}
+
+\ifthesis@book
+%% Chapter
+\titleformat{\chapter}[block]
+{\normalfont\sffamily}
+{\colorbox{secblock}{\parbox[c][\chapterboxheight][c]{\chapterboxwidth}{%
+      \hfil\color{white}\large \@chapapp~{\Huge\thechapter}\hfil}}}
+{0.5em}
+{%
+  \raisebox{\chapterbaselineoffset}{\parbox{\dimexpr\linewidth-\chapterboxwidth-0.5em-2\fboxrule-2\fboxsep}{\color{secblock}\Huge\raggedright #1}%
+  }%
+}
+\titlespacing*{\chapter}
+{0pt}{10ex}{10ex}
+\else
+\typeout{Package thesis info: chapter will not be available}
+\fi
+
+%% Section
+\titleformat{\section}[block]
+{\normalfont\sffamily}
+{\colorbox{secblock}{\parbox[c][\sectionboxheight][c]{\sectionboxwidth}{%
+      \hfil\color{white}\Large\thesection\hfil}}}
+{0.5em}
+{\ifthesis@book%
+  \raisebox{\sectionbaselineoffset}{%
+    \ifnum\c@secnumdepth>0
+    \setlength\thesis@boxwidth{\dimexpr\linewidth-\sectionboxwidth-0.5em-2\fboxrule-2\fboxsep}
+    \else
+    \setlength\thesis@boxwidth{\dimexpr\linewidth}
+    \fi
+    \parbox{\thesis@boxwidth}{%
+      \color{secblock}\Large\sffamily\raggedright #1\\[-0.8ex]%
+      \color{secblock}\footnotesize\textbf\dotfill}}%
+  \else%
+  \parbox{\dimexpr\linewidth-2.3em-0.5em-2\fboxrule-2\fboxsep}{%
+    \color{secblock}\Large\sffamily\raggedright #1}%
+  \fi%
+}
+
+\titlespacing*{\section}
+{0pt}{3.5ex plus 1ex minus .2ex}{4ex plus 1ex}
+
+%% Subsection
+\titleformat{\subsection}[block]
+{\normalfont\sffamily}
+{\colorbox{secblock}{\parbox[c][\subsectionboxheight][c]{\subsectionboxwidth}{%
+      \hfil\vspace*{-\topskip}\vspace*{\fill}\color{white}\large\thesubsection\vfill\hfil}}}
+{0.5em}
+{\raisebox{\ifthesis@dottedsubsection\subsectionbaselineoffset\else-0.2ex\fi}{%
+    \ifnum\c@secnumdepth>1
+    \setlength\thesis@boxwidth{\dimexpr\linewidth-\subsectionboxwidth-0.5em-2\fboxrule-2\fboxsep}
+    \else
+    \setlength\thesis@boxwidth{\dimexpr\linewidth}
+    \fi
+    \parbox{\thesis@boxwidth}{%
+      \color{secblock}\large\sffamily\raggedright #1
+      \ifthesis@dottedsubsection\\[-0.8ex]%
+      \color{secblock}\footnotesize\textbf\dotfill\fi}}%
+}
+\titlespacing*{\subsection}
+{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+%% Subsubsection
+\titleformat{\subsubsection}[block]
+{\normalfont\sffamily}
+{\colorbox{secblock}{\parbox[c][\subsubsectionboxheight][c]{\subsubsectionboxwidth}{%
+      \hfil\color{white}\thesubsubsection\hfil}}}
+{0.5em}
+{\raisebox{\subsubsectionbaselineoffset}{%
+    \ifnum\c@secnumdepth>2
+    \setlength\thesis@boxwidth{\dimexpr\linewidth-\subsubsectionboxwidth-0.5em-2\fboxrule-2\fboxsep}
+    \else
+    \setlength\thesis@boxwidth{\dimexpr\linewidth}
+    \fi
+    \parbox{\thesis@boxwidth}{%
+      \color{secblock}\sffamily\raggedright #1\\[-0.8ex]%
+      \color{secblock}\footnotesize\textbf\dotfill}}%
+}
+\titlespacing*{\subsubsection}
+{0pt}{4.5ex}{2.3ex}
+
+%% Paragraph
+\titleformat{\paragraph}[block]
+{\color{parablue}$\blacksquare\;$}
+{}
+{0pt}
+{\small\textbf{\textsf{\color{parablue} #1}}}
+\titlespacing*{\paragraph}
+{0pt}{4.5ex}{2.3ex}
+
+%% Subparagraph
+\titleformat{\subparagraph}[block]
+{\color{parablue}\raisebox{0.2ex}{$\blacktriangleright\;$}}
+{}
+{0pt}
+{\small\textbf{\textsf{\color{parablue} #1}}}
+\titlespacing*{\subparagraph}
+{0pt}{4.5ex}{2.3ex}
+\fi
+
+% % %
+% % % Titlepage
+% % %
+
+\def\@date{\today}
+\newcommand\thesis@thesisname{Thesis}
+\newcommand\thesis@thesisimage{}
+\newcommand\thesis@supervisortext{Supervised by}
+\newcommand\thesis@secondarycorrectortext{Secondary Corrector}
+\newcommand\declarationtitle{Statutory Declaration}
+\newcommand\declarationbody{
+  I herewith formally declare that I have written the submitted thesis independently. I did not use any outside support except for the quoted literature and other sources mentioned in the paper.\\
+  I clearly marked and separately listed all of the literature and all of the other sources which I employed when producing this academic work, either literally or in content.
+}
+\newcommand\university[1]{\gdef\thesis@university{#1}}
+\newcommand\city[1]{\gdef\thesis@city{#1}}
+\newcommand\institute[1]{\gdef\thesis@institute{#1}}
+\newcommand\thesisname[1]{\gdef\thesis@thesisname{#1}}
+\newcommand\thesisimage[1]{\gdef\thesis@thesisimage{#1}}
+\newcommand\supervisor[2][Supervised by]{\gdef\thesis@supervisortext{#1}\gdef\thesis@supervisor{#2}}
+\newcommand\secondarycorrector[2][Secondary Corrector]{\gdef\thesis@secondarycorrectortext{#1}\gdef\thesis@secondarycorrector{#2}}
+
+\newcommand\makethesistitle{
+  \begin{titlepage}
+    \centering
+    \null\vfill
+    {\Large\textsc{\thesis@university}}\vskip 2ex
+    {\sffamily\thesis@institute}
+    \vfill
+    {\large\bfseries\thesis@thesisname}\vskip 3ex
+    {\LARGE\@title}\vskip 4ex
+    {\large\@author}
+    \vfill
+    \thesis@thesisimage
+    \vfill
+    {\@date}\vskip 1ex
+    {\small\thesis@supervisortext}\\
+    {\thesis@supervisor}\vskip 1ex
+    \ifx\thesis@secondarycorrector\undefined\else
+    {\small\thesis@secondarycorrectortext}\\
+    {\thesis@secondarycorrector}
+    \fi
+    \vfill
+  \end{titlepage}
+}
+
+
+\newcommand\declaration[1]{
+  \ifx#1*\relax\else
+    \cleardoublepage\thispagestyle{empty}
+  \fi
+  \null\vfill
+  \begingroup
+  \def\\{\par\vskip\baselineskip}
+  \parindent=0pt
+  \begin{center}
+    \bfseries\declarationtitle
+  \end{center}
+  \declarationbody
+  \par\vskip5\baselineskip
+  \thesis@city, \@date \hfill \@author
+  \endgroup
+  \null\vfill
+  \ifx#1*\relax\else
+    \cleardoublepage
+    #1%
+  \fi%
+}
+% % %
+% % % TOC
+% % %
+
+\ifthesis@styledtoc
+\RequirePackage[titles]{tocloft}
+
+\ifthesis@alignedtoc
+\setlength{\cftchapnumwidth}{3em}
+\setlength{\cftsecnumwidth}{3em}
+\setlength{\cftsubsecnumwidth}{3em}
+\setlength{\cftsubsubsecnumwidth}{3em}
+\renewcommand{\cftsecindent}{0em}
+\renewcommand{\cftsubsecindent}{0em}
+\renewcommand{\cftsubsubsecindent}{0em}
+\fi
+
+% Chapters
+\ifthesis@book
+\renewcommand{\cftchapfont}{\color{secblock}\normalfont\bfseries\sffamily}
+\renewcommand{\cftchappagefont}{\normalfont\bfseries\sffamily}
+\ifthesis@dottedtoc\else
+\renewcommand{\cftchapleader}{\hskip1.5em\relax}
+\renewcommand{\cftchapafterpnum}{\cftparfillskip}
+\fi
+\fi
+
+% Sections
+\renewcommand{\cftsecfont}{\normalfont\sffamily}
+\renewcommand{\cftsecpagefont}{\normalfont\sffamily}
+\ifthesis@dottedtoc\else
+\renewcommand{\cftsecleader}{\hskip1.5em\relax}
+\renewcommand{\cftsecafterpnum}{\cftparfillskip}
+\fi
+
+% Subsections
+\renewcommand{\cftsubsecfont}{\normalfont\sffamily}
+\renewcommand{\cftsubsecpagefont}{\normalfont\sffamily}
+\ifthesis@dottedtoc\else
+\renewcommand{\cftsubsecleader}{\hskip1.5em\relax}
+\renewcommand{\cftsubsecafterpnum}{\cftparfillskip}
+\fi
+
+% Subsubsections
+\renewcommand{\cftsubsubsecfont}{\normalfont\sffamily}
+\renewcommand{\cftsubsubsecpagefont}{\normalfont\sffamily}
+\ifthesis@dottedtoc\else
+\renewcommand{\cftsubsubsecleader}{\hskip1.5em\relax}
+\renewcommand{\cftsubsubsecafterpnum}{\cftparfillskip}
+\fi
+
+\fi
+
+% % %
+% % % Itemize and Enumerate
+% % %
+
+\RequirePackage{tikz}
+\renewcommand\labelitemi{%
+  \tikz{%
+    \filldraw[line width=0pt,draw=black,fill=gray7] (0,0) -- (1em,0) -- (1.2em,0.5ex) -- (1em,1ex) -- (0,1ex) -- cycle;%
+  }%
+}
+
+% % %
+% % % Epigraphs
+% % %
+
+\RequirePackage{epigraph}
+\ifthesis@nostyledepigraph
+\else
+\RequirePackage{csquotes}
+\let\thesis@epigraph=\epigraph
+\let\thesis@qitem=\qitem
+\renewcommand\epigraphsize{\footnotesize}
+\epigraphrule=0pt
+\epigraphwidth=70mm
+\beforeepigraphskip=0pt
+\afterepigraphskip=15mm
+\renewcommand\epigraph[2]{\thesis@epigraph{\itshape\enquote{#1}}{#2}}
+\renewcommand\qitem[2]{\thesis@qitem{\itshape\enquote{#1}}{#2}}
+\fi
